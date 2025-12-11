@@ -1,35 +1,73 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TJ — Photographer & Lightpainting Artist</title>
-<link rel="stylesheet" href="style.css"></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TJ — Photographer & Lightpainting Artist</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
 <body>
-<header><nav><h1 class="logo">TJ Photography</h1>
-<ul>
-<li><a href="bio.html">Artist Bio</a></li>
-<li><a href="portfolio.html">Portfolio</a></li>
-<li><a href="resume.html">Resume</a></li>
-<li><a href="booking.html">Book</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul></nav></header>
+
+<header>
+    <nav>
+        <h1 class="logo">TJ Photography</h1>
+        <ul>
+            <li><a href="bio.html">Artist Bio</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="booking.html">Book</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
 <section class="hero">
-  <section class="rotating-gallery">
+    <h2>Exploring Light, Motion & The American West</h2>
+    <p>
+        Visionary photography merging long exposure, color, and motion to reveal what lives 
+        between the seen and unseen. Lightpainting, landscapes, portraits, and immersive art installations.
+    </p>
+</section>
+
+<!-- ROTATING GALLERY -->
+<section class="rotating-gallery">
     <div class="slider">
-        <div class="slide active">
-            <img src="images/hero1.jpg" alt="Gallery Image 1">
-        </div>
-        <div class="slide">
-            <img src="images/hero2.jpg" alt="Gallery Image 2">
-        </div>
-        <div class="slide">
-            <img src="images/hero3.jpg" alt="Gallery Image 3">
-        </div>
+
+        <div class="slide active"><img src="images/file_00000000276471fdb54dfdf7ec8c6783.png" alt=""></div>
+        <div class="slide"><img src="images/_DSF0754.jpg" alt=""></div>
+        <div class="slide"><img src="images/_DSF1818.jpg" alt=""></div>
+        <div class="slide"><img src="images/_DSC4460.jpg" alt=""></div>
+        <div class="slide"><img src="images/_DSF0650.jpg" alt=""></div>
+        <div class="slide"><img src="images/_DSF0021.jpg" alt=""></div>
+        <div class="slide"><img src="images/DSC09272.jpg" alt=""></div>
+        <div class="slide"><img src="images/_DSF0186.jpg" alt=""></div>
+        <div class="slide"><img src="images/_DSF1268-HDR.jpg" alt=""></div>
+        <div class="slide"><img src="images/_DSF0908.jpg" alt=""></div>
+
     </div>
 
-    <!-- Controls -->
     <button class="prev">&#10094;</button>
     <button class="next">&#10095;</button>
 </section>
 
-<h2>Exploring Light, Motion & The American West</h2>
-<p>TJ is a Colorado-based photographer specializing in immersive lightpainting, fine-art landscapes, and visionary portrait work.</p>
-</section></body></html>
+<!-- JS for Rotating Gallery -->
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(n) {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].classList.add("active");
+}
+
+document.querySelector(".next").addEventListener("click", () => showSlide(currentSlide + 1));
+document.querySelector(".prev").addEventListener("click", () => showSlide(currentSlide - 1));
+
+setInterval(() => showSlide(currentSlide + 1), 5000);
+</script>
+
+</body>
+</html>
+
