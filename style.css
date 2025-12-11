@@ -54,3 +54,35 @@ body {background:#0d0d0d;color:#e6e6e6;font-family:Arial;}
 
 .prev { left: 20px; }
 .next { right: 20px; }
+
+/* INSTAGRAM FEED STYLING */
+.instagram-feed {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.instagram-feed h2 {
+    margin-bottom: 22px;
+    font-size: 2rem;
+    color: #e6e6e6;
+}
+
+/* Responsive iframe for masonry layout */
+.masonry-instagram {
+    width: 100%;
+    min-height: 550px;
+    border: none;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Optional: hover zoom effect for images inside the widget */
+.snapwidget-widget img {
+    transition: transform 0.3s ease;
+}
+
+.snapwidget-widget img:hover {
+    transform: scale(1.03);
+}
