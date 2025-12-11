@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Session</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+<section class="page">
+<h2>Book a Photography Session</h2>
+<form class="booking-form" action="https://formsubmit.co/YOUR_EMAIL" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Booking Request">
+<input type="hidden" name="_template" value="box">
+<input type="hidden" name="_next" value="thankyou.html">
+
+<label>Name</label><input type="text" name="name" required>
+<label>Email</label><input type="email" name="email" required>
+
+<label>Select Date & Time</label>
+<input type="text" id="session-datetime" name="date_time" placeholder="Select date & time" required>
+
+<label>Message</label><textarea name="message"></textarea>
+
+<button type="submit">Submit</button>
+</form>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+flatpickr("#session-datetime", {
+ enableTime: true,
+ time_24hr: false,
+ minDate: "today",
+ dateFormat: "Y-m-d h:i K",
+ minuteIncrement: 15,
+ defaultHour: 18,
+ onReady: function(selectedDates, dateStr, instance) {
+   instance.config.minTime = "10:00";
+   instance.config.maxTime = "22:00";
+ }
+});
+</script>
+</body></html>
