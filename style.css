@@ -107,3 +107,69 @@ body {background:#0d0d0d;color:#e6e6e6;font-family:Arial;}
     line-height: 1.6;
     font-size: 1.1rem;
 }
+
+/* CONTACT PAGE */
+.contact-section {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.contact-intro {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.contact-info p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    background: #111;
+    border: none;
+    border-radius: 6px;
+    color: #e6e6e6;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #00aaff;
+}
+
+.contact-form button {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 12px 20px;
+    background: #00aaff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #0088cc;
+}
